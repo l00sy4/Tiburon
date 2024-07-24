@@ -28,3 +28,4 @@ An alternative approach would be to drop a legitimate executable, overwrite it w
 
 This wonderful header file: https://github.com/mrexodia/phnt-single-header
 
+The originals: https://github.com/Hagrid29/herpaderply_hollowing, https://github.com/hasherezade/transacted_hollowing

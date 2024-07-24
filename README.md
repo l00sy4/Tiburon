@@ -4,7 +4,7 @@
 <br>
 </h1>
 
-Tiburon is a process hollower that currently supports ghostly hollowing. For the sake of simplicity, the payload is written to a temporary file. Ideally you would fetch it out of the .rsrc section, or over the internet.
+Tiburon is a process hollower that currently supports ghostly hollowing. For the sake of simplicity, the payload is written to a temporary fileb which is then mapped. Ideally you would fetch it out of the .rsrc section, or over the internet.
 
 ### Features
 

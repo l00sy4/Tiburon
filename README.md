@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-<img src="Tier.PNG", width="200" height="400">
+<img src="Tier.PNG", width="300" height="300">
 <br>
 </h1>
 

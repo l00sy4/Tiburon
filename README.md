@@ -24,7 +24,7 @@ Tiburon is a process hollower that currently supports ghostly hollowing.
 
 An alternative approach would be to drop a legitimate executable, overwrite it with your payload, leveraging COW, before finally reverting it to its original content. 
 
-#### Reference
+#### References
 
 This wonderful header file: https://github.com/mrexodia/phnt-single-header
 
